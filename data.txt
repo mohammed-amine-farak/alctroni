@@ -1,0 +1,38 @@
+CREATE DATABASE IF NOT EXISTS arduino;
+
+USE arduino;
+
+CREATE TABLE IF NOT EXISTS customer
+(
+    id INT,
+    password VARCHAR(30),
+    PRIMARY KEY (id) 
+);
+
+CREATE TABLE IF NOT EXISTS product
+(    
+    name VARCHAR(500),
+    min_qt INT,
+    img VARCHAR(150),
+    price INT,
+    quantity INT,  -- Corrected the column name from 'quantite' to 'quantity'
+    category VARCHAR(50)
+);
+
+INSERT INTO customer (id, password) VALUES (1, 'eqe');
+INSERT INTO product (name, min_qt, img, price, quantity, category)
+VALUES
+('arduino nano',3,'img/arduinonano.jpeg',30,50,'arduino'),
+('arduino uno',6,'img/arduinouno.jpg',50,90,'arduino'),
+('at mega16',10,'img/atmega16.jpeg',100,3000,'arduino'),
+('at mega329',3,'img/atmel.jpg',34,4000,'arduino'),
+
+('camera raspberry',3,'img/cameraRaspberry.jpg',30,50,'raspberry'),
+('raspberry 5',6,'img/raspberrypi5.jpg',50,90,'raspberry'),
+('raspberry 4',10,'img/raspberrypi4.jpg',100,3000,'raspberry'),
+('monitor',3,'img/raspberrypi-display.jpg',34,4000,'raspberry'),
+
+('capacitor',3,'img/capacitor1.jpg',30,50,'elc'),
+('capacitor 1uf',6,'img/capacitor1.jpg',50,90,'elc'),
+('transistor',10,'img/npn2.jpg',100,3000,'elc'),
+('diode',3,'img/diodled-Copie.jpg',34,4000,'elc');

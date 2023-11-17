@@ -1,5 +1,5 @@
 <?php
-// Establish database connection
+//   Establish database connection
 $data = mysqli_connect('localhost', 'root', '', 'arduino');
 
 // Check if the connection was successful
@@ -47,7 +47,7 @@ if (!$categoriesResult) {
             </form>
         </div>
 
-        <div class="products">
+        <div class="productse">
             <?php
             
             // Check if a specific category is selected
@@ -78,8 +78,14 @@ if (!$categoriesResult) {
                 // Display products based on the selected category or all categories
                 while ($fechFiltered = mysqli_fetch_assoc($ballFiltered)) {
                     ?>
-                    <div class="child">
-                        <img class= "imges" src="<?= $fechFiltered['img'] ?>">
+                    <div style = "height:200px;
+                      width: 30%;
+                      background-image: url('<?= $fechFiltered['img'] ?>');
+                      background-position: center;
+                      background-repeat: no-repeat;
+                      background-size: cover;
+                      ">
+                       
                         <h1><?= $fechFiltered['name'] ?></h1>
                         <p><?= $fechFiltered['price'] ?></p>
                     </div>
@@ -89,5 +95,40 @@ if (!$categoriesResult) {
             ?>
         </div>
     </div>
+    <style>
+     .container-product{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+
+}
+.bar{
+    height: 100%;
+    width: 30%;
+    background-color: aqua;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+button{
+    height: 30px;
+    width: 95%;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.productse{
+  height:100vh;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+
+}
+
+    </style>
 </body>
 </html>

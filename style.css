@@ -77,7 +77,7 @@ font-size: 20px;
 }
 
 .container-product{
-    height: auto;
+    height:600vh;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -99,7 +99,7 @@ button{
     margin-top: 20px;
 }
 .products{
-  height: auto;
+  height: 600vh;
   width: 70%;
   background-color: blue;
   display: flex;
@@ -112,4 +112,11 @@ button{
     height: 200px;
     width: 30%;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    
+    height: 100px;
+    width: 10px;
 }

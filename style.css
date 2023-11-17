@@ -115,7 +115,7 @@ button{
     display: flex;
     flex-direction: column;
 }
-img{
+.imges{
     
     height: 100px;
     width: 10px;

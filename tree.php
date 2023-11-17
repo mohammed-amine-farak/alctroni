@@ -79,7 +79,7 @@ if (!$categoriesResult) {
                 while ($fechFiltered = mysqli_fetch_assoc($ballFiltered)) {
                     ?>
                     <div class="child">
-                        <img src="<?= $fechFiltered['img'] ?>">
+                        <img class= "imges" src="<?= $fechFiltered['img'] ?>">
                         <h1><?= $fechFiltered['name'] ?></h1>
                         <p><?= $fechFiltered['price'] ?></p>
                     </div>
